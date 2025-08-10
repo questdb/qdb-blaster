@@ -1,0 +1,37 @@
+debug = true
+
+[database]
+ilp = "http::addr=localhost:9000;token=the_secure_token;"
+pgsql = "host=localhost port=8812 user=admin password=quest dbname=qdb"
+
+[tables.metrics]
+schema = [
+    ["timestamp", "Timestamp"],
+    ["cpu_usage", "Double"],
+    ["mem_free", "Long"],
+    ["host", "Symbol"]
+]
+designated_ts = "timestamp"
+
+[tables.metrics.send]
+batch_pause = ["500ms", "2s"]
+batch_size = [1000, 5000]
+parallel_senders = 8
+tot_rows = 1_000_000
+batches_connection_keepalive = 50
+
+[tables.events]
+schema = [
+    ["event_time", "Timestamp"],
+    ["event_type", "Symbol"],
+    ["user_id", "Long"],
+    ["details", "Symbol"]
+]
+designated_ts = "event_time"
+
+[tables.events.send]
+batch_pause = ["1s", "3s"]
+batch_size = [500, 2000]
+parallel_senders = 4
+tot_rows = 500_000
+batches_connection_keepalive = 20
