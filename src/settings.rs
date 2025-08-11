@@ -1,6 +1,5 @@
-use std::{collections::HashMap, env, time::Duration};
+use std::{collections::HashMap, time::Duration};
 
-use config::{Config, ConfigError, Environment, File};
 use serde::Deserialize;
 
 use crate::col::{ColName, ColType};
@@ -12,7 +11,7 @@ pub struct Settings {
     pub tables: HashMap<String, Table>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 pub struct Connection {
     pub ilp: String,
     pub pgsql: String,
