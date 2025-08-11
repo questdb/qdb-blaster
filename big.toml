@@ -53,9 +53,9 @@ designated_ts = "timestamp"
 [tables.metrics1.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics2]
 schema = [
@@ -106,9 +106,9 @@ designated_ts = "timestamp"
 [tables.metrics2.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics3]
 schema = [
@@ -159,9 +159,9 @@ designated_ts = "timestamp"
 [tables.metrics3.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics4]
 schema = [
@@ -212,9 +212,9 @@ designated_ts = "timestamp"
 [tables.metrics4.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics5]
 schema = [
@@ -265,9 +265,9 @@ designated_ts = "timestamp"
 [tables.metrics5.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics6]
 schema = [
@@ -318,9 +318,9 @@ designated_ts = "timestamp"
 [tables.metrics6.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics7]
 schema = [
@@ -371,9 +371,9 @@ designated_ts = "timestamp"
 [tables.metrics7.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics8]
 schema = [
@@ -424,9 +424,9 @@ designated_ts = "timestamp"
 [tables.metrics8.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics9]
 schema = [
@@ -477,9 +477,9 @@ designated_ts = "timestamp"
 [tables.metrics9.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics10]
 schema = [
@@ -530,9 +530,9 @@ designated_ts = "timestamp"
 [tables.metrics10.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics11]
 schema = [
@@ -583,9 +583,9 @@ designated_ts = "timestamp"
 [tables.metrics11.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics12]
 schema = [
@@ -636,9 +636,9 @@ designated_ts = "timestamp"
 [tables.metrics12.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics13]
 schema = [
@@ -689,9 +689,9 @@ designated_ts = "timestamp"
 [tables.metrics13.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics14]
 schema = [
@@ -742,9 +742,9 @@ designated_ts = "timestamp"
 [tables.metrics14.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics15]
 schema = [
@@ -795,9 +795,9 @@ designated_ts = "timestamp"
 [tables.metrics15.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics16]
 schema = [
@@ -848,9 +848,9 @@ designated_ts = "timestamp"
 [tables.metrics16.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics17]
 schema = [
@@ -901,9 +901,9 @@ designated_ts = "timestamp"
 [tables.metrics17.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics18]
 schema = [
@@ -954,9 +954,9 @@ designated_ts = "timestamp"
 [tables.metrics18.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics19]
 schema = [
@@ -1007,9 +1007,9 @@ designated_ts = "timestamp"
 [tables.metrics19.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 
 [tables.metrics20]
 schema = [
@@ -1060,7 +1060,7 @@ designated_ts = "timestamp"
 [tables.metrics20.send]
 batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 

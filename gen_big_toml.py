@@ -1,5 +1,3 @@
-# generate_big_toml.py
-
 datatypes = ["Double", "Long", "Symbol"]
 
 def generate_schema():
@@ -14,9 +12,9 @@ def generate_schema():
 def generate_send_section():
     return '''batch_pause = ["10ms", "100ms"]
 batch_size = [10000, 50000]
-parallel_senders = 16
-tot_rows = 100_000_000
-batches_connection_keepalive = 50
+parallel_senders = 4
+tot_rows = 25_000_000
+batches_connection_keepalive = 10
 '''
 
 def main():
