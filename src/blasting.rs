@@ -153,17 +153,19 @@ impl TableSender {
 
             // Check if we need to disconnect
             if batches_sent >= self.send_settings.batches_connection_keepalive {
-                if let Some((mut sender, mut buffer)) = client.take() {
-                    if let Err(e) = sender.flush(&mut buffer) {
-                        warn!(
-                            "Sender {} failed to flush before disconnect: {}",
-                            self.sender_id, e
-                        );
-                    }
+                if let Some((_, buffer)) = client.take() {
                     debug!(
                         "Sender {} disconnected after {} batches",
                         self.sender_id, batches_sent
                     );
+                    // Only drop sender, keep buffer, and assign client from match result
+                    client = match QuestDbSender::from_conf(&self.ilp_connection) {
+                        Ok(new_sender) => Some((new_sender, buffer)),
+                        Err(e) => {
+                            warn!("Sender {} failed to reconnect: {}", self.sender_id, e);
+                            None
+                        }
+                    };
                 }
                 batches_sent = 0;
             }
@@ -177,13 +179,6 @@ impl TableSender {
                 debug!("Sender {} pausing for {:?}", self.sender_id, pause_duration);
                 thread::sleep(pause_duration);
             }
-        }
-
-        // Final flush
-        if let Some((mut sender, mut buffer)) = client {
-            sender
-                .flush(&mut buffer)
-                .context("Failed to flush final batch")?;
         }
 
         info!(
