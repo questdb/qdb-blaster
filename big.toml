@@ -1,7 +1,7 @@
 debug = true
 
 [database]
-ilp = "http::addr=localhost:9000;token=qt1cBkOuvc_8VFCMHRacRaDNp7DkzTtf9Cu1eh6rSuYfMM;"
+ilp = "tcp::addr=localhost:9009;protocol_version=2;username=test_ilp_user;token=NPo-BO1F2zr7LoWBEeBpY6ZfNQXRdhpyud3llmWUycg;token_x=ayc3ehklyXSa4Pe1w-jVxqGZjh0jJMUECThWftnHnu0;token_y=N0fRjqck8MrwcvLCuJK_lQexLaDV8ZSn-EKnNHsBX1o"
 pgsql = "host=localhost port=8812 user=test_user password=pass dbname=qdb"
 
 [tables.metrics1]
@@ -51,11 +51,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics1.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics2]
 schema = [
@@ -104,11 +104,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics2.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics3]
 schema = [
@@ -157,11 +157,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics3.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics4]
 schema = [
@@ -210,11 +210,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics4.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics5]
 schema = [
@@ -263,11 +263,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics5.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics6]
 schema = [
@@ -316,11 +316,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics6.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics7]
 schema = [
@@ -369,11 +369,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics7.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics8]
 schema = [
@@ -422,11 +422,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics8.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics9]
 schema = [
@@ -475,11 +475,11 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics9.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
 [tables.metrics10]
 schema = [
@@ -528,539 +528,9 @@ schema = [
 designated_ts = "timestamp"
 
 [tables.metrics10.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics11]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics11.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics12]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics12.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics13]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics13.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics14]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics14.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics15]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics15.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics16]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics16.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics17]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics17.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics18]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics18.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics19]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics19.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
-
-[tables.metrics20]
-schema = [
-    ["timestamp", "Timestamp"],
-    ["col1", "Double"],
-    ["col2", "Long"],
-    ["col3", "Symbol"],
-    ["col4", "Double"],
-    ["col5", "Long"],
-    ["col6", "Symbol"],
-    ["col7", "Double"],
-    ["col8", "Long"],
-    ["col9", "Symbol"],
-    ["col10", "Double"],
-    ["col11", "Long"],
-    ["col12", "Symbol"],
-    ["col13", "Double"],
-    ["col14", "Long"],
-    ["col15", "Symbol"],
-    ["col16", "Double"],
-    ["col17", "Long"],
-    ["col18", "Symbol"],
-    ["col19", "Double"],
-    ["col20", "Long"],
-    ["col21", "Symbol"],
-    ["col22", "Double"],
-    ["col23", "Long"],
-    ["col24", "Symbol"],
-    ["col25", "Double"],
-    ["col26", "Long"],
-    ["col27", "Symbol"],
-    ["col28", "Double"],
-    ["col29", "Long"],
-    ["col30", "Symbol"],
-    ["col31", "Double"],
-    ["col32", "Long"],
-    ["col33", "Symbol"],
-    ["col34", "Double"],
-    ["col35", "Long"],
-    ["col36", "Symbol"],
-    ["col37", "Double"],
-    ["col38", "Long"],
-    ["col39", "Symbol"],
-    ["col40", "Double"]
-]
-designated_ts = "timestamp"
-
-[tables.metrics20.send]
-batch_pause = ["10ms", "100ms"]
-batch_size = [10000, 50000]
-parallel_senders = 4
-tot_rows = 25_000_000
-batches_connection_keepalive = 10
+batch_pause = ["50ms", "100ms"]
+batch_size = [5000, 10000]
+parallel_senders = 16
+tot_rows = 15_000_000
+batches_connection_keepalive = 20
 
